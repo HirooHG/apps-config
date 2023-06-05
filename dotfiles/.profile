@@ -15,10 +15,11 @@ export EWW="$HOME/.config/hypr/eww"
 export PATH="$PATH:$HOME/Dev/flutter/bin"
 export PATH="$PATH:$HOME/Dev/android-studio/bin/"
 export PATH="$PATH:$HOME/Dev/bin"
-export PATH="$PATH:$HOME/Dev/vscode/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/Dev/node/bin"
 export PATH="$PATH:$HOME/Dev/code/bin"
+export PATH="$PATH:$HOME/Android/Sdk/emulator/"
+export PATH="$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin/"
 
 # oh my zsh
 export ZSH="$HOME/.zshfiles/.oh-my-zsh"
