@@ -10,6 +10,7 @@ export XMODIFIERS='@im=fcitx'
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 export CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 export EWW="$HOME/.config/hypr/eww"
+export WLR_NO_HARDWARE_CURSORS=1
 
 # user conf
 export PATH="$PATH:$HOME/Dev/flutter/bin"
@@ -20,6 +21,7 @@ export PATH="$PATH:$HOME/Dev/node/bin"
 export PATH="$PATH:$HOME/Dev/code/bin"
 export PATH="$PATH:$HOME/Android/Sdk/emulator/"
 export PATH="$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin/"
+export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
 
 # oh my zsh
 export ZSH="$HOME/.zshfiles/.oh-my-zsh"
