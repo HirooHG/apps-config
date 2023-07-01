@@ -8,6 +8,9 @@ alias l='ls -CF'
 alias fck='thefuck'
 alias copy='wl-copy'
 alias nv="nvim"
+alias rb="sudo reboot"
+alias pw="sudo poweroff"
+alias adb-change="adb kill-server && sudo adb start-server"
 
 # sys
 alias pc="sudo pacman"
