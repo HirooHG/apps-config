@@ -11,6 +11,7 @@ export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 export CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 export EWW="$HOME/.config/hypr/eww"
 export WLR_NO_HARDWARE_CURSORS=1
+export GPG_TTY=$(tty)
 
 # user conf
 export PATH="$PATH:$HOME/Dev/flutter/bin"
