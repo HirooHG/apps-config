@@ -16,10 +16,6 @@ export GPG_TTY=$(tty)
 # user conf
 export PATH="$PATH:$HOME/Dev/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
-export PATH="$PATH:$HOME/Dev/code/bin"
-export PATH="$PATH:$HOME/Android/Sdk/emulator/"
-export PATH="$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin/"
-export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
 
 # oh my zsh
 export ZSH="$HOME/.zshfiles/.oh-my-zsh"
