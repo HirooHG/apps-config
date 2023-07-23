@@ -5,18 +5,23 @@ alias ll="ls -alF --color=auto"
 alias la='ls -A'
 alias ls="ls --color=auto"
 alias l='ls -CF'
+alias nv="nvim"
+alias adb-change="adb kill-server && sudo adb start-server"
 alias fck='thefuck'
 alias copy='wl-copy'
-alias nv="nvim"
-alias rb="sudo reboot"
-alias pw="sudo poweroff"
-alias adb-change="adb kill-server && sudo adb start-server"
+alias gnu='ping gnu.org'
 
 # sys
 alias pc="sudo pacman"
 alias suspend="loginctl suspend"
 alias docker="sudo docker"
 alias eww="eww -c $EWW"
+alias rb="sudo reboot"
+alias pw="sudo poweroff"
+alias bat="~/.config/hypr/eww/scripts/battery --bat"
+alias time-left="~/.config/hypr/eww/scripts/battery --left"
+alias ipa="~/.config/hypr/eww/scripts/wifi --ip"
+alias ida="~/.config/hypr/eww/scripts/wifi --id"
    
 ## ssh
 alias addauth="ssh-add /home/hiroo/.ssh/auth"
@@ -28,6 +33,7 @@ alias wifiqim="bash /home/hiroo/Scripts/wificonnect qim"
 alias wifiiut="bash /home/hiroo/Scripts/wificonnect iut"
 alias wifi4g="bash /home/hiroo/Scripts/wificonnect 4g"
 alias wifisam="bash /home/hiroo/Scripts/wificonnect sam"
+alias wifimam="bash /home/hiroo/Scripts/wificonnect mam"
 
 ## git
 alias g="git"
