@@ -1,4 +1,4 @@
-# aliases
+export ALIASES_PATH="$HOME/apps-config/dotfiles/aliases"
 
 ## gen
 alias ll="ls -alF --color=auto"
@@ -23,43 +23,15 @@ alias time-left="~/.config/hypr/eww/scripts/battery --left"
 alias ipa="~/.config/hypr/eww/scripts/wifi --ip"
 alias ida="~/.config/hypr/eww/scripts/wifi --id"
    
-## ssh
-alias addauth="ssh-add /home/hiroo/.ssh/auth"
-alias addgit="ssh-add /home/hiroo/.ssh/githubSsh"
 
-## wifi
-alias wifi="bash /home/hiroo/Scripts/wificonnect"
-alias wifiqim="bash /home/hiroo/Scripts/wificonnect qim"
-alias wifiiut="bash /home/hiroo/Scripts/wificonnect iut"
-alias wifi4g="bash /home/hiroo/Scripts/wificonnect 4g"
-alias wifisam="bash /home/hiroo/Scripts/wificonnect sam"
-alias wifimam="bash /home/hiroo/Scripts/wificonnect mam"
+if [[ -r "$ALIASES_PATH/.wifi" ]]; then
+  . "$ALIASES_PATH/.wifi"
+fi
 
-## git
-alias g="git"
-alias gcl="git clone"
-alias gi='git init'
-alias ga="git add"
-alias gc="git commit"
-alias gr="git restore"
-alias gch="git checkout"
-alias gst="git stash"
-alias gsp="git stash pop"
-alias gps="git push"
-alias gpl="git pull"
-alias gm="git merge"
-alias gb="git branch"
-alias gd="git diff"
-alias grb="git rebase"
-alias gf="git fetch"
-alias gl="git log"
-alias gt="git tag"
-alias gsa="git status"
-alias grm="git rm"
+if [[ -r "$ALIASES_PATH/.git_aliases" ]]; then
+  . "$ALIASES_PATH/.git_aliases"
+fi
 
-## ssh
-alias raspissh='ssh -p 34000 ubuntu@hugogolliet.fr'
-alias raspisftp='sftp -P 34000 ubuntu@hugogolliet.fr'
-alias fixssh='ssh -p 3400 hiroo@192.168.1.37'
-alias fixsftp='sftp -P 3400 hiroo@192.168.1.37'
-
+if [[ -r "$ALIASES_PATH/.ssh" ]]; then
+  . "$ALIASES_PATH/.ssh"
+fi
