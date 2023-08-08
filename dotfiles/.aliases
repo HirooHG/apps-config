@@ -1,4 +1,4 @@
-export ALIASES_PATH="$HOME/apps-config/dotfiles/aliases"
+export ALIASES_PATH="$APPCONFIG_PATH/dotfiles/aliases"
 
 ## gen
 alias ll="ls -alF --color=auto"

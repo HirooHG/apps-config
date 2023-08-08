@@ -1,7 +1,10 @@
+export SCRIPTS_PATH="$APPCONFIG_PATH/scripts"
+
 ## wifi
-alias wifi="bash /home/hiroo/Scripts/wificonnect"
-alias wifiqim="bash /home/hiroo/Scripts/wificonnect qim"
-alias wifiiut="bash /home/hiroo/Scripts/wificonnect iut"
-alias wifi4g="bash /home/hiroo/Scripts/wificonnect 4g"
-alias wifisam="bash /home/hiroo/Scripts/wificonnect sam"
-alias wifimam="bash /home/hiroo/Scripts/wificonnect mam"
+alias wifihome="bash $SCRIPTS_PATH/wifi.sh home"
+alias wifi4g="bash $SCRIPTS_PATH/wifi.sh 4g"
+alias wifiiut="bash $SCRIPTS_PATH/wifi.sh iut"
+alias wifisam="bash $SCRIPTS_PATH/wifi.sh sam"
+alias wifimam="bash $SCRIPTS_PATH/wifi.sh mam"
+
+alias testw="$SCRIPTS_PATH/testwifi.sh"

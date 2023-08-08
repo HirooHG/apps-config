@@ -4,7 +4,8 @@
 eval `ssh-agent -s`
 ssh-add $HOME/.ssh/githubSsh
 
-export DOTFILES_PATH="$HOME/apps-config/dotfiles"
+export APPCONFIG_PATH="$HOME/apps-config"
+export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
 
 # aliases and sh confs
 . "$DOTFILES_PATH/.profile"

@@ -1,5 +1,5 @@
 
-export PROFILE_PATH="$HOME/apps-config/dotfiles/profile"
+export PROFILE_PATH="$APPCONFIG_PATH/dotfiles/profile"
 
 # shrc for bash and zsh
 # gen
