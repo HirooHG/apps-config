@@ -4,8 +4,6 @@ count=0
 
 until [ $count == 1 ]
 do
-  ping gnu.org > /dev/null && count=1
-  sleep 0.5
+  ping gnu.org
+  sleep 1
 done
-
-echo yay
