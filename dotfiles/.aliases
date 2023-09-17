@@ -21,9 +21,6 @@ alias eww="eww -c $EWW"
 alias rb="sudo reboot"
 alias pw="sudo poweroff"
 alias bat="~/.config/hypr/eww/scripts/battery --bat"
-alias time-left="~/.config/hypr/eww/scripts/battery --left"
-alias ipa="~/.config/hypr/eww/scripts/wifi --ip"
-alias ida="~/.config/hypr/eww/scripts/wifi --id"
    
 
 if [[ -r "$ALIASES_PATH/.wifi" ]]; then

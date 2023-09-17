@@ -2,10 +2,4 @@ export SCRIPTS_PATH="$APPCONFIG_PATH/scripts"
 
 ## wifi
 alias wifi="bash $SCRIPTS_PATH/wifi.sh"
-alias wifihome="bash $SCRIPTS_PATH/wifi.sh home"
-alias wifi4g="bash $SCRIPTS_PATH/wifi.sh 4g"
-alias wifiiut="bash $SCRIPTS_PATH/wifi.sh iut"
-alias wifisam="bash $SCRIPTS_PATH/wifi.sh sam"
-alias wifimam="bash $SCRIPTS_PATH/wifi.sh mam"
-
 alias testw="$SCRIPTS_PATH/testwifi.sh"
