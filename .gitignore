@@ -1,4 +1,5 @@
-dotfiles/.qiminfo
+dotfiles/.qiminfo*
 ca/
 wpa/
 dotfiles/aliases/.ssh*
+dotfiles/.gitconfig*
