@@ -12,6 +12,8 @@ alias copy='wl-copy'
 alias gnu='ping gnu.org'
 alias mnt='sudo mount'
 alias umnt='sudo umount'
+alias src='source ~/.zshrc'
+alias nvr='nv ~/apps-config/dotfiles/.rc'
 
 # sys
 alias pc="sudo pacman"

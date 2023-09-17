@@ -4,7 +4,7 @@
 eval `ssh-agent -s` > /dev/null
 ssh-add $HOME/.ssh/githubSsh || echo "ssh github key not found"
 
-export APPCONFIG_PATH="${PWD}/apps-config"
+export APPCONFIG_PATH="$HOME/apps-config"
 export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
 
 if [[ -r "$DOTFILES_PATH/.aliases" ]]; then
