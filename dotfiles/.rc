@@ -1,15 +1,19 @@
-[ $(pidof Hyprland) ] || exec dbus-launch Hyprland || exit 1
+[ $(pidof Hyprland) ] || exec dbus-launch Hyprland || echo "nope"
 
-# conf
-eval `ssh-agent -s`
-ssh-add $HOME/.ssh/githubSsh
+# ssh
+eval `ssh-agent -s` > /dev/null
+ssh-add $HOME/.ssh/githubSsh || echo "ssh github key not found"
 
-export APPCONFIG_PATH="$HOME/apps-config"
+export APPCONFIG_PATH="${PWD}/apps-config"
 export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
 
-# aliases and sh confs
-. "$DOTFILES_PATH/.profile"
-. "$DOTFILES_PATH/.aliases"
+if [[ -r "$DOTFILES_PATH/.aliases" ]]; then
+  . "$DOTFILES_PATH/.aliases"
+fi
+
+if [[ -r "$DOTFILES_PATH/.profile" ]]; then
+  . "$DOTFILES_PATH/.profile"
+fi
 
 if [[ -r "$HOME/.cargo/env" ]]; then
   . "$HOME/.cargo/env"
