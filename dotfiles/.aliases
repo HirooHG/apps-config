@@ -14,6 +14,7 @@ alias mnt='sudo mount'
 alias umnt='sudo umount'
 alias src='source ~/.zshrc'
 alias nvr='nv ~/apps-config/dotfiles/.rc'
+alias adbr='adb -s 7772b3df reverse tcp:3402 tcp:3402'
 
 # sys
 alias pc="sudo pacman"
