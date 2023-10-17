@@ -15,10 +15,6 @@ if [[ -r "$PROFILE_PATH/.path" ]]; then
   . "$PROFILE_PATH/.path"
 fi
 
-if [[ -r "$PROFILE_PATH/.omz" ]]; then
-  . "$PROFILE_PATH/.omz"
-fi
-
 if [[ -r "$PROFILE_PATH/.fcitx5" ]]; then
   . "$PROFILE_PATH/.fcitx5"
 fi

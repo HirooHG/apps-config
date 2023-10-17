@@ -1,7 +1,0 @@
-## oh my zsh
-export ZSH="$HOME/.zshfiles/.oh-my-zsh"
-ZSH_THEME="clean"
-plugins=(git)
-zstyle ':omz:*' aliases no
-zstyle ':omz:update' auto
-source $ZSH/oh-my-zsh.sh

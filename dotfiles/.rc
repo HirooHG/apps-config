@@ -1,8 +1,20 @@
-[ $(pidof Hyprland) ] || exec dbus-launch Hyprland || echo "nope"
+[ $(pidof Hyprland) ] || exec dbus-launch Hyprland || echo "nope, hyprland not available"
 
 # ssh
 eval `ssh-agent -s` > /dev/null
-ssh-add $HOME/.ssh/githubSsh || echo "ssh github key not found"
+ssh-add $HOME/.ssh/githubSsh || echo "ssh github key not found or ssh agent not activated"
+
+autoload -U compinit; compinit
+
+# create a file for this
+zstyle ':completion:*' file-sort modification
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' menu select
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
+zstyle ':completion:*:messages' format '%F{purple}-- %d -!%f'
+zstyle ':completion:*:warnings' format '%F{red}-- no matches found -!%f'
+zstyle ':completion:*' group-name ''
 
 export APPCONFIG_PATH="$HOME/apps-config"
 export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
