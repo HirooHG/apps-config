@@ -1,0 +1,9 @@
+#!/bin/bash
+
+fullhour=$(date | awk '{print $4}')
+
+hour=$(expr "$(echo "$fullhour" | cut -d':' -f1)" - 1)
+minutes=$(echo "$fullhour" | cut -d':' -f2)
+seconds=$(echo "$fullhour" | cut -d':' -f2)
+
+echo "$hour:$minutes:$seconds"
