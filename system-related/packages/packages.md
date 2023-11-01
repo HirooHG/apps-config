@@ -22,6 +22,12 @@ runit
 wireless_tools
 artix-archlinux-support
 sudo
+less
+jq 1.7-1
+llvm15
+man-db
+screen
+sl
 
 ## Fonts
 adobe-source-han-sans-cn-fonts
@@ -73,6 +79,12 @@ vim
 wpa_supplicant
 yarn
 zsh
+bc
+dotnet-sdk-6.0 6.0.24.sdk124-1
+dotnet-runtime-6.0 6.0.24.sdk124-1
+aspnet-runtime-6.0 6.0.24.sdk124-1
+dotnet-sdk
+dotnet-source-built-artifacts
 
 ## UI
 discord
@@ -89,6 +101,14 @@ foot
 thunderbird
 wofi
 rofi
+eww
+leagueoflegends-git
+mupdf
+zathura
+zathura-cb
+zathura-djvu
+zathura-pdf-mupdf
+zathura-ps
 
 ### utilities
 grim

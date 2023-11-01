@@ -2,7 +2,7 @@
 
 # ssh
 eval `ssh-agent -s` > /dev/null
-ssh-add $HOME/.ssh/githubSsh || echo "ssh github key not found or ssh agent not activated"
+ssh-add $HOME/.ssh/githubSsh > /dev/null
 
 export APPCONFIG_PATH="$HOME/apps-config"
 export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
