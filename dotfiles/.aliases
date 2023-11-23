@@ -24,7 +24,6 @@ alias adbr='adb -s 7772b3df reverse tcp:3402 tcp:3402'
 # sys
 alias pc="sudo pacman"
 alias suspend="loginctl suspend"
-alias docker="sudo docker"
 alias eww="eww -c $EWW"
 alias rb="sudo reboot"
 alias pw="sudo poweroff"

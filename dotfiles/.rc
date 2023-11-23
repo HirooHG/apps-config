@@ -1,5 +1,8 @@
 [ $(pidof Hyprland) ] || exec dbus-launch Hyprland
 
+dockers_owner="$(stat /var/run/docker.sock | grep $USER)"
+[ -z "$dockers_owner" ] && sudo chown "$USER" /var/run/docker.sock
+
 # ssh
 eval `ssh-agent -s` > /dev/null
 ssh-add $HOME/.ssh/githubSsh > /dev/null
