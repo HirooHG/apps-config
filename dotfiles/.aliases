@@ -4,11 +4,16 @@ export ALIASES_PATH="$APPCONFIG_PATH/dotfiles/aliases"
 alias ll="ls -alF --color=auto"
 alias la='ls -A'
 alias ls="ls --color=auto"
-alias l='ls -CF'
+alias lc='ls -CF'
+alias l='less'
+alias c='clear'
+alias gp='grep'
 alias nv="nvim"
 alias adb-change="adb kill-server && sudo adb start-server"
 alias fck='thefuck'
-alias copy='wl-copy'
+alias wcp='wl-copy'
+alias wpa='wl-paste'
+alias me='whoami'
 alias gnu='ping gnu.org'
 alias mnt='sudo mount'
 alias umnt='sudo umount'
