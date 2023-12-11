@@ -28,7 +28,7 @@ then
   until [ $count == 1 ]
   do
     sudo pkill -e wpa_supplicant
-    count=$(sudo wpa_supplicant -B -i $interface -c $path/wpa_supplicant.$arg.conf | wc -l) || echo bruh
+    count=$(sudo wpa_supplicant -B -i $interface -c $path/wpa_supplicant.$arg.conf | wc -l)
     sudo dhcpcd -q
   done
   exit 0

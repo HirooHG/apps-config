@@ -9,7 +9,6 @@ alias l='less'
 alias c='clear'
 alias gp='grep'
 alias nv="nvim"
-alias adb-change="adb kill-server && sudo adb start-server"
 alias fck='thefuck'
 alias wcp='wl-copy'
 alias wpa='wl-paste'
@@ -19,9 +18,11 @@ alias mnt='sudo mount'
 alias umnt='sudo umount'
 alias src='source ~/.zshrc'
 alias nvr='nv ~/apps-config/dotfiles/.rc'
+alias adb-change="adb kill-server && sudo adb start-server"
 alias adbr='adb -s 7772b3df reverse tcp:3402 tcp:3402'
 
 # sys
+alias s="sudo"
 alias pc="sudo pacman"
 alias suspend="loginctl suspend"
 alias eww="eww -c $EWW"
