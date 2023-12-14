@@ -1,5 +1,0 @@
-export SCRIPTS_PATH="$APPCONFIG_PATH/scripts"
-
-## wifi
-alias wifi="$SCRIPTS_PATH/wifi.sh"
-alias testw="$SCRIPTS_PATH/testwifi.sh"

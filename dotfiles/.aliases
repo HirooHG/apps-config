@@ -18,8 +18,8 @@ alias mnt='sudo mount'
 alias umnt='sudo umount'
 alias src='source ~/.zshrc'
 alias nvr='nv ~/apps-config/dotfiles/.rc'
-alias adb-change="adb kill-server && sudo adb start-server"
-alias adbr='adb -s 7772b3df reverse tcp:3402 tcp:3402'
+alias adbc="sudo adb kill-server && sudo adb start-server"
+alias adbr='sudo adb -s 7772b3df reverse tcp:3402 tcp:3402'
 
 # sys
 alias s="sudo"
@@ -29,6 +29,9 @@ alias eww="eww -c $EWW"
 alias rb="sudo reboot"
 alias pw="sudo poweroff"
 alias bat="~/.config/hypr/eww/scripts/battery --bat"
+
+# code
+alias g-debug="./gradlew assembleDebug && ./gradlew installDebug && adb shell am start -n fr.HirooHG.td_kotlin/fr.HirooHG.td_kotlin.MainActivity"      
    
 
 if [[ -r "$ALIASES_PATH/.wifi" ]]; then
