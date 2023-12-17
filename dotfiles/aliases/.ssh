@@ -1,0 +1,4 @@
+export SSH_PATH="$APPCONFIG_PATH/ssh"
+
+alias auth="ssh-add $SSH_PATH/auth/auth"
+alias github="ssh-add $SSH_PATH/github/github"
