@@ -2,5 +2,5 @@
 
 [ "$USER" != "root" ] && echo "U'r not super user" && exit 0
 
-mount.cifs //10.100.100.102/home/etudiants/gollieth /home/hiroo/documents/IUT/P_Perso -rw -o user=gollieth,dom=iut-acy,file_mode=0777
-mount.cifs //10.100.100.102/Public /home/hiroo/documents/IUT/U_Public -rw -o user=gollieth,dom=iut-acy,file_mode=0777
+mount.cifs //10.100.100.102/home/etudiants/gollieth $HOME/documents/IUT/P_Perso -rw -o user=gollieth,dom=iut-acy,file_mode=0777
+mount.cifs //10.100.100.102/Public $HOME/documents/IUT/U_Public -rw -o user=gollieth,dom=iut-acy,file_mode=0777

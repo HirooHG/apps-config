@@ -31,7 +31,7 @@ alias pw="sudo poweroff"
 alias bat="~/.config/hypr/eww/scripts/battery --bat"
 
 # code
-alias g-debug="./gradlew assembleDebug && ./gradlew installDebug && adb shell am start -n fr.HirooHG.td_kotlin/fr.HirooHG.td_kotlin.MainActivity"      
+alias g-debug="./gradlew assembleDebug && ./gradlew installDebug && adb shell am start -n "
    
 
 if [[ -r "$ALIASES_PATH/.wifi" ]]; then
