@@ -20,6 +20,7 @@ alias src='source ~/.zshrc'
 alias nvr='nv ~/apps-config/dotfiles/.rc'
 alias adbc="sudo adb kill-server && sudo adb start-server"
 alias adbr='sudo adb -s 7772b3df reverse tcp:3402 tcp:3402'
+alias cam='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
 
 # sys
 alias s="sudo"

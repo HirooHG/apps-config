@@ -1,0 +1,4 @@
+#!/bin/bash
+
+hour=$(~/apps-config/scripts/bin/hour)
+notify-send "bruh" "$hour"

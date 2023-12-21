@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ip=$(ip a | grep wlan0 | grep inet | awk '{print $2}')
+if [ -z "$ip" ]; then
+  notify-send "Not connected" "bruh"
+else
+  wl-copy $ip
+  notify-send "$ip" "copied to clipboard"
+fi
