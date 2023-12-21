@@ -1,0 +1,11 @@
+#!/bin/bash
+
+device=$(bluetoothctl devices | grep "2C:BE")
+[ -z "$device" ] && notify-send "bluetoothctl" "No such a device" && exit 1
+
+isConnected=$(bluetoothctl info | grep "Ear")
+[ "$isConnected" ] && notify-send "bluetoothctl" "Already connected" && exit 1
+
+bluetoothctl connect 2C:BE:EB:6A:06:32 && \
+  pactl set-default-sink bluez_output.2C_BE_EB_6A_06_32.1 && \
+  notify-send "bluetoothctl" "Connected"

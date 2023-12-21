@@ -2,4 +2,4 @@
 
 [ "$USER" != "root" ] && echo "U'r not super user" && exit 0
 
-openconnect --protocol=anyconnect --user=gollieth vpn.univ-smb.fr
+openconnect --protocol=anyconnect --user=gollieth vpn.univ-smb.fr && notify-send "Vpn" "connected to vpn"

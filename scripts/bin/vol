@@ -3,4 +3,6 @@
 right=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')
 left=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $12}')
 
-echo "left: $left ; right: $right"
+msg="left: $left ; right: $right"
+echo $msg
+notify-send "Yep" "$msg"

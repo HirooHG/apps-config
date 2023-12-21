@@ -31,8 +31,8 @@ then
     count=$(sudo wpa_supplicant -B -i $interface -c $path/wpa_supplicant.$arg.conf | wc -l)
     sudo dhcpcd -q
   done
-  notify-send "wifi" "executed on $arg"
-  exit 0
+  msg="executed on $arg"
+  echo $msg && notify-send "wifi" $msg
 else
   echo "argument pls" && exit 1
 fi
