@@ -1,0 +1,5 @@
+#!/bin/bash
+
+bat=$($HOME/apps-config/hyprland-config/eww/scripts/battery --bat)
+
+notify-send "battery" "$bat %"

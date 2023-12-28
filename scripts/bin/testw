@@ -10,7 +10,7 @@ do
     sleep 1
   else
     echo "connected"
-    notify-send "Connected" $ip
+    notify-send "Connected" "$ip"
     isConnected=1
   fi
 done

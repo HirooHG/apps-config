@@ -2,6 +2,6 @@
 
 [ "$USER" != "root" ] && echo "U'r not super user" && exit 0
 
-umount $HOME/documents/IUT/U_Public && \
-  umount $HOME/documents/IUT/P_Perso && \
+umount /home/hiroo/documents/IUT/U_Public && \
+  umount /home/hiroo/documents/IUT/P_Perso && \
   notify-send "Vpn" "unmounted folders"

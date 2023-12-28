@@ -32,7 +32,7 @@ then
     sudo dhcpcd -q
   done
   msg="executed on $arg"
-  echo $msg && notify-send "wifi" $msg
+  echo $msg && notify-send "wifi" "$msg"
 else
   echo "argument pls" && exit 1
 fi
