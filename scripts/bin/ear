@@ -1,11 +1,32 @@
 #!/bin/bash
 
-device=$(bluetoothctl devices | grep "2C:BE")
-[ -z "$device" ] && notify-send "bluetoothctl" "No such a device" && exit 1
 
-isConnected=$(bluetoothctl info | grep "Ear")
-[ "$isConnected" ] && notify-send "bluetoothctl" "Already connected" && exit 1
+function black() {
+  connect "2C:BE:EB:6E:0B:3E"
+}
 
-bluetoothctl connect 2C:BE:EB:6A:06:32 && \
-  pactl set-default-sink bluez_output.2C_BE_EB_6A_06_32.1 && \
-  notify-send "bluetoothctl" "Connected"
+function white() {
+  connect "2C:BE:EB:6A:06:32"
+}
+
+function connect() {
+  device=$(bluetoothctl devices | grep "$1")
+  [ -z "$device" ] && notify-send "bluetoothctl" "No such a device" && exit 1
+
+  isConnected=$(bluetoothctl info | grep "$1")
+  [ "$isConnected" ] && notify-send "bluetoothctl" "Already connected" && exit 1
+
+  sink="$(echo "$1" | tr ':' '_')"
+  bluetoothctl connect "$1" && \
+    pactl set-default-sink bluez_output.$sink.1 && \
+    notify-send "bluetoothctl" "Connected"
+}
+
+ears=(white black)
+ear=$(echo ${ears[*]} | tr ' ' '\n' | wofi --show dmenu)
+
+case $ear in
+  black) black ;;
+  white) white ;;
+  *) exit 1;;
+esac
