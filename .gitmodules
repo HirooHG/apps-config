@@ -1,6 +1,0 @@
-[submodule "nvim-conf"]
-	path = nvim-conf
-	url = git@github.com:HirooHG/nvim-conf.git
-[submodule "hyprland-config"]
-	path = hyprland-config
-	url = git@github.com:HirooHG/hyprland-config.git

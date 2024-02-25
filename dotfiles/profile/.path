@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # user conf
 export PATH="$PATH:$HOME/dev/bin"
 export PATH="$PATH:$HOME/dev/bin-commands"

@@ -1,17 +1,20 @@
+#!/bin/bash
+
 # Hyprland
-[ $(pidof Hyprland) ] || exec dbus-launch Hyprland
+[ "$(pidof Hyprland)" ] || exec dbus-launch Hyprland
 
 # docker socket owning
-dockers_owner="$(stat /var/run/docker.sock | grep $USER)"
-[ -z "$dockers_owner" ] && sudo chown "$USER" /var/run/docker.sock
+dockers_owner="$(stat /var/run/docker.sock | grep "$USER")"
+[ "$dockers_owner" = "" ] && sudo chown "$USER" /var/run/docker.sock
 
 export APPCONFIG_PATH="$HOME/apps-config"
 export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
 
 # ssh
-eval `ssh-agent -s` > /dev/null
-ssh-add $APPCONFIG_PATH/ssh/github/github
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add "$APPCONFIG_PATH"/ssh/github/github
 
+# shell style
 if [[ -r "$DOTFILES_PATH/.zstyle" ]]; then
   . "$DOTFILES_PATH/.zstyle"
 fi

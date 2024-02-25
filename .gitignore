@@ -2,3 +2,5 @@ ca/
 wpa/
 dotfiles/.qiminfo*
 ssh/
+nvim-conf/
+hyprland-config/

@@ -1,7 +1,7 @@
 window {
   margin: 0px;
-  border: 5px solid #111019;
-  background-color: rgba(11, 10, 16, 0.9);
+  border: 5px solid #fbf1c7;
+  background-color: #1d2021;
   border-radius: 15px;
 }
 
@@ -11,9 +11,9 @@ window {
   padding: 4px 10px;
   margin: 4px;
   border: none;
-  color: #e2e0ec;
+  color: #282828;
   font-weight: bold;
-  background-color: #161420;
+  background-color: #fbf1c7;
   outline: none;
   border-radius: 15px;
   margin: 10px;
@@ -32,7 +32,7 @@ window {
   padding: 3px;
   border: none;
   border-radius: 15px;
-  border: 5px solid #111019;
+  border: 5px solid #fbf1c7;
 }
 
 #scroll {
@@ -60,5 +60,5 @@ window {
   margin: 0px 0px;
   border: none;
   border-radius: 15px;
-  background: linear-gradient(90deg, #E97193 0%, #f09db5 100%);
+  background: #83a598;
 }

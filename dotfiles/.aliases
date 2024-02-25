@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export ALIASES_PATH="$DOTFILES_PATH/aliases"
 
 ## gen
@@ -17,16 +19,16 @@ alias gnu='ping gnu.org'
 alias mnt='sudo mount'
 alias umnt='sudo umount'
 alias src='source ~/.zshrc'
-alias nvr='nv ~/apps-config/dotfiles/.rc'
+alias nvr="nv ~/$DOTFILES_PATH/.rc"
 alias adbc="sudo adb kill-server && sudo adb start-server"
 alias adbr='sudo adb -s 7772b3df reverse tcp:3402 tcp:3402'
 alias cam='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
+alias sc='screen -dmS'
 
 # sys
 alias s="sudo"
 alias pc="sudo pacman"
 alias suspend="loginctl suspend"
-alias eww="eww -c $EWW"
 alias rb="sudo reboot"
 alias pw="sudo poweroff"
 
