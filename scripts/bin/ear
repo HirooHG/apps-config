@@ -22,11 +22,23 @@ function connect() {
     notify-send "bluetoothctl" "Connected"
 }
 
-ears=(white black)
+function disconnect() {
+  name=$(bluetoothctl info | grep Name)
+  if [ "$name" ]; then
+    bluetoothctl disconnect
+    pactl set-default-sink alsa_output.pci-0000_03_00.6.analog-stereo 
+    notify-send "Success" "Device disconnected"
+  else
+    notify-send "Error" "No device connected"
+  fi
+}
+
+ears=(white black disconnect)
 ear=$(echo ${ears[*]} | tr ' ' '\n' | wofi --show dmenu)
 
 case $ear in
   black) black ;;
   white) white ;;
+  disconnect) disconnect ;;
   *) exit 1;;
 esac

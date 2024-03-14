@@ -21,7 +21,6 @@ alias umnt='sudo umount'
 alias src='source ~/.zshrc'
 alias nvr="nv ~/$DOTFILES_PATH/.rc"
 alias adbc="sudo adb kill-server && sudo adb start-server"
-alias adbr='sudo adb -s 7772b3df reverse tcp:3402 tcp:3402'
 alias cam='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
 alias sc='screen -dmS'
 
