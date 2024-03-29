@@ -34,3 +34,4 @@ fi
 if [[ -r "$DOTFILES_PATH/.qiminfo" ]]; then
   . "$DOTFILES_PATH/.qiminfo"
 fi
+eval "$(zoxide init zsh)"
