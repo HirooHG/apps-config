@@ -4,3 +4,4 @@ dotfiles/.qiminfo*
 ssh/
 nvim/
 hypr/
+dotfiles/.distro_based

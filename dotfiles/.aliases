@@ -3,27 +3,32 @@
 export ALIASES_PATH="$DOTFILES_PATH/aliases"
 
 ## gen
-alias ll="ls -alF --color=auto"
-alias la='ls -A'
-alias ls="ls --color=auto"
-alias lc='ls -CF'
-alias l='less'
-alias c='clear'
-alias gp='grep'
+alias ll="exa -l"
+alias la="exa -a"
+alias ls="exa"
+alias cat="bat"
+alias cd="z"
+alias exat="exa --tree"
+alias exal="exa -l"
+alias exaa="exa -a"
+alias l="less"
+alias c="clear"
+alias gp="grep"
 alias nv="nvim"
-alias fck='thefuck'
-alias wcp='wl-copy'
-alias wpa='wl-paste'
-alias me='whoami'
-alias gnu='ping gnu.org'
-alias mnt='sudo mount'
-alias umnt='sudo umount'
-alias src='source ~/.zshrc'
+alias fck="thefuck"
+alias wcp="wl-copy"
+alias wpa="wl-paste"
+alias me="whoami"
+alias gnu="ping gnu.org"
+alias mnt="sudo mount"
+alias umnt="sudo umount"
+alias src="source ~/.zshrc"
 alias nvr="nv ~/$DOTFILES_PATH/.rc"
 alias adbc="sudo adb kill-server && sudo adb start-server"
-alias cam='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
-alias sc='screen -dmS'
-alias mergep='gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=merged.pdf -dBATCH'
+alias cam="mpv av://v4l2:/dev/video0 --profile=low-latency --untimed"
+alias sc="screen -dmS"
+alias scr="screen"
+alias mergep="gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=merged.pdf -dBATCH"
 
 # sys
 alias s="sudo"
