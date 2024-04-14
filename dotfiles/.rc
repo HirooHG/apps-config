@@ -1,31 +1,21 @@
 #!/bin/bash
 
-# Hyprland
-[ "$(pidof Hyprland)" ] || exec dbus-launch Hyprland
-
-# docker socket owning
-dockers_owner="$(stat /var/run/docker.sock | grep "$USER")"
-[ "$dockers_owner" = "" ] && sudo chown "$USER" /var/run/docker.sock
-
 export APPCONFIG_PATH="$HOME/apps-config"
 export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
+
+# distro based things
+hostname="$(hostname)"
+if [[ -r "$DOTFILES_PATH/hostname_conf/.$hostname" ]]; then
+  . "$DOTFILES_PATH/hostname_conf/.$hostname"
+fi
 
 # ssh
 eval "$(ssh-agent -s)" > /dev/null
 ssh-add "$APPCONFIG_PATH"/ssh/github/github
 
-# shell style
-if [[ -r "$DOTFILES_PATH/.zstyle" ]]; then
-  . "$DOTFILES_PATH/.zstyle"
-fi
-
-if [[ -r "$DOTFILES_PATH/.aliases" ]]; then
-  . "$DOTFILES_PATH/.aliases"
-fi
-
-if [[ -r "$DOTFILES_PATH/.profile" ]]; then
-  . "$DOTFILES_PATH/.profile"
-fi
+. "$DOTFILES_PATH/.zstyle"
+. "$DOTFILES_PATH/.aliases"
+. "$DOTFILES_PATH/.profile"
 
 if [[ -r "$HOME/.cargo/env" ]]; then
   . "$HOME/.cargo/env"
@@ -35,7 +25,4 @@ if [[ -r "$DOTFILES_PATH/.qiminfo" ]]; then
   . "$DOTFILES_PATH/.qiminfo"
 fi
 
-if [[ -r "$DOTFILES_PATH/.distro_based" ]]; then
-  . "$DOTFILES_PATH/.distro_based"
-fi
 eval "$(zoxide init zsh)"

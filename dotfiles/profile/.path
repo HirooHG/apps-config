@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# user conf
-export PATH="$PATH:$HOME/dev/bin"
-export PATH="$PATH:$HOME/dev/bin-commands"
-export PATH="$PATH:$HOME/.cargo/bin"
