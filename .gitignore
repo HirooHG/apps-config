@@ -5,3 +5,4 @@ ssh/
 nvim/
 hypr/
 dotfiles/hostname_conf
+.DS_Store

@@ -25,11 +25,9 @@ foreground = "#FBF1C7"
 background = "#1D2021"
 
 [colors.cursor]
-text = "#FB4934" # red
 cursor = "#FB4934" # red
 
 [colors.vi_mode_cursor]
-text = "#FB4934" # red
 cursor = "#FB4934" # red
 
 [colors.search]
