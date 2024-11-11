@@ -3,15 +3,15 @@
 export APPCONFIG_PATH="$HOME/apps-config"
 export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
 
-# distro based things
-hostname="$(hostname)"
-if [[ -r "$DOTFILES_PATH/hostname_conf/.$hostname" ]]; then
-  . "$DOTFILES_PATH/hostname_conf/.$hostname"
-fi
-
 # ssh
 eval "$(ssh-agent -s)" > /dev/null
 ssh-add "$APPCONFIG_PATH"/ssh/github/github
+
+# distro based things
+hostname="$(hostname)"
+if [[ -r "$DOTFILES_PATH/hostname_conf/.$hostname" ]]; then
+. "$DOTFILES_PATH/hostname_conf/.$hostname"
+fi
 
 . "$DOTFILES_PATH/.zstyle"
 . "$DOTFILES_PATH/.aliases"
@@ -19,10 +19,6 @@ ssh-add "$APPCONFIG_PATH"/ssh/github/github
 
 if [[ -r "$HOME/.cargo/env" ]]; then
   . "$HOME/.cargo/env"
-fi
-
-if [[ -r "$DOTFILES_PATH/.qiminfo" ]]; then
-  . "$DOTFILES_PATH/.qiminfo"
 fi
 
 eval "$(zoxide init zsh)"
