@@ -2,15 +2,15 @@
 
 export APPCONFIG_PATH="$HOME/apps-config"
 export DOTFILES_PATH="$APPCONFIG_PATH/dotfiles"
+export NVM_DIR=~/.nvm
 
 # ssh
 eval "$(ssh-agent -s)" > /dev/null
 ssh-add "$APPCONFIG_PATH"/ssh/github/github
 
 # distro based things
-hostname="$(hostname)"
-if [[ -r "$DOTFILES_PATH/hostname_conf/.$hostname" ]]; then
-. "$DOTFILES_PATH/hostname_conf/.$hostname"
+if [ -r "$DOTFILES_PATH/hostname_conf/.host" ]; then
+	. "$DOTFILES_PATH/hostname_conf/.host" 
 fi
 
 . "$DOTFILES_PATH/.zstyle"
@@ -20,5 +20,8 @@ fi
 if [[ -r "$HOME/.cargo/env" ]]; then
   . "$HOME/.cargo/env"
 fi
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(zoxide init zsh)"
