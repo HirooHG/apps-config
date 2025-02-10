@@ -1,8 +1,0 @@
-#!/bin/bash
-
-ip=$(ip a | grep wlan0 | grep inet | awk '{print $2}')
-if [ -z "$ip" ]; then
-  notify-send "Wifi" "not connected"
-else
-  notify-send "Wifi" "$ip"
-fi

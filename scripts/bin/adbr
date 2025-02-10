@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [ "$1" ]; then
-  sudo adb -s 7772b3df reverse "tcp:$1" "tcp:$1"
-else
-  echo "Argument is missing"
-fi

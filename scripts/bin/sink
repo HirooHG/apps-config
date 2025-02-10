@@ -1,9 +1,0 @@
-#!/bin/bash
-
-sinks=$(pactl list | grep Sink -A 3 | grep Name | awk '{print $2}')
-
-sink=$(echo $sinks | tr ' ' '\n' | wofi --show dmenu)
-
-if [ $sink ]; then
-  pactl set-default-sink $sink
-fi

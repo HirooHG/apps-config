@@ -1,5 +1,0 @@
-#!/bin/bash
-
-uuid=$(~/apps-config/scripts/bin/uuid)
-echo $uuid | wl-copy
-notify-send "uuid" "$uuid copied"
