@@ -9,6 +9,8 @@ alias gnu="ping gnu.org"
 alias mnt="sudo mount"
 alias umnt="sudo umount"
 alias src="source $DOTFILES_PATH/.rc"
+alias zz="z .."
+alias compose="docker compose"
 
 # sys
 alias s="sudo"
