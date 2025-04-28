@@ -1,8 +1,3 @@
-[user]
-  name = HirooHG
-  email = hugo.golliet.0209@gmail.com
-  signingkey=687DC2CCBCCA1B58
-
 [pull]
   rebase = true
 
@@ -11,3 +6,13 @@
 
 [push]
   autoSetupRemote = true
+
+[init]
+  defaultBranch = main
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[lfs "ssh"]
+  automultiplex = false

@@ -1,0 +1,7 @@
+[user]
+  name = hugo
+  email = hugo@hugo-golliet.dev
+  signingkey = 65F4B1978714B6D8
+
+[include]
+  path = ./.gitconfig
