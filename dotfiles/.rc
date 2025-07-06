@@ -9,8 +9,8 @@ eval "$(ssh-agent -s)" > /dev/null
 ssh-add "$APPCONFIG_PATH"/ssh/github/github
 
 # distro based things
-if [ -r "$DOTFILES_PATH/.host" ]; then
-	. "$DOTFILES_PATH/.host" 
+if [ -r "$DOTFILES_PATH/hostname_conf/.host" ]; then
+	. "$DOTFILES_PATH/hostname_conf/.host" 
 fi
 
 . "$DOTFILES_PATH/.zstyle"

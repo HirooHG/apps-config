@@ -4,5 +4,5 @@ dotfiles/.qiminfo*
 ssh/
 nvim/
 hypr/
-dotfiles/.host
+dotfiles/hostname_conf
 .DS_Store

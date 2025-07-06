@@ -1,0 +1,8 @@
+#!/bin/bash
+
+right=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')
+left=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $12}')
+
+msg="left: $left ; right: $right"
+echo $msg
+notify-send "Yep" "$msg"

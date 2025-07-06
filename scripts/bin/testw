@@ -1,0 +1,16 @@
+#!/bin/bash
+
+isConnected=0
+
+until [ $isConnected == 1 ]
+do
+  ip=$(ip a | grep wlan0 | grep inet | awk '{print $2}')
+  if [ -z "$ip" ]; then
+    echo "non connected"
+    sleep 1
+  else
+    echo "connected"
+    notify-send "Connected" "$ip"
+    isConnected=1
+  fi
+done
